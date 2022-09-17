@@ -2,7 +2,8 @@ const theme = {
     colors: {
         primary: '#0145a6',
         backdropColor: '#000000',
-        loadingIndicator: '#000000'
+        loadingIndicator: '#000000',
+        background: '#f0f0f0',
     },
     opacity: {
         backdrop: 0.3
@@ -28,7 +29,12 @@ const strings = {
     AUTHENTICATION_SCREEN: {
         DEVICE_CAPABILITY: 'No face or fingerprint scanner is available on the device.',
         PROCCED_TEXT: 'Set Authentication to Proceed',
-        SETTINGS_BUTTON: 'Go to Settings'
+        SETTINGS_BUTTON: 'Go to Settings',
+        GO_TO_SETTINGS_ALERT_TITLE: 'Authentication Setup',
+        GO_TO_SETTINGS_ALERT_DESCRIPTION: 'Go to settings and setup authentication to proceed'
+    },
+    HOME: {
+        TITLE: 'TODO: '
     }
 }
 

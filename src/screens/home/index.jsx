@@ -1,20 +1,26 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {
+  SafeAreaView,
+  Platform,
+  StatusBar,
+  StyleSheet,
+} from "react-native";
+import { Typography } from "../../components";
+import { theme, strings } from "../../constants";
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Text>Home View</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Typography>{strings.HOME.TITLE}</Typography>
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    backgroundColor: theme.colors.background,
   },
 });
 
