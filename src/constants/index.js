@@ -1,9 +1,11 @@
 const theme = {
     colors: {
         primary: '#0145a6',
+        textColor: '#000000',
         backdropColor: '#000000',
         loadingIndicator: '#000000',
         background: '#f0f0f0',
+        disbaleText: '#c9c9c9'
     },
     opacity: {
         backdrop: 0.3

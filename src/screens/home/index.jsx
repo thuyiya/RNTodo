@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  SafeAreaView,
+  View,
   Platform,
   StatusBar,
   StyleSheet,
@@ -10,17 +10,16 @@ import { theme, strings } from "../../constants";
 
 const Home = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Typography>{strings.HOME.TITLE}</Typography>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Typography color={theme.colors.primary} align="left" weight="midBold" size="h2">{strings.HOME.TITLE}</Typography>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    backgroundColor: theme.colors.background,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   },
 });
 

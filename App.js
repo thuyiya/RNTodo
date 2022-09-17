@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import { Auth, Home } from './src';
-
-
+import { theme } from './src/constants';
 
 export default function App() {
   const [access, setAccess] = useState(false)
@@ -23,8 +22,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: theme.colors.background,
   },
 });
