@@ -19,6 +19,9 @@ This application setup and build with latest version with react native (EXPO) [F
 | [prop-types](https://www.npmjs.com/package/prop-types)                | Runtime type checking for React props and similar objects. 
 | [Jest](https://jestjs.io)                                             | Jest is a JavaScript test runner, that help you to ensure correctness of any JavaScript codebase                                                                            |
 | [Enzyme](https://enzymejs.github.io/enzyme/)                          | Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output                                     |
+| [redux](https://redux.js.org/)                          | Redux is an open-source JavaScript library for managing and centralizing application state.                                   |
+| [react-redux](https://react-redux.js.org)                          | React Redux is the official React UI bindings layer for Redux                                   |
+| [redux-persist](https://www.npmjs.com/package/redux-persist)                          | Persist and rehydrate a redux store.                                   |
 
 #### Understanding the File Structure
 
