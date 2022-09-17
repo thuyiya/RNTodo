@@ -1,12 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Auth } from './src'
 
-export default function App() {
+const Authentication = () => {
   return (
     <View style={styles.container}>
-      <Auth />
-      <StatusBar style="auto" />
+      <Text>Authentication View</Text>
     </View>
   );
 }
@@ -19,3 +17,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default Authentication;
