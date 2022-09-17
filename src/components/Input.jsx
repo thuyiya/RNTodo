@@ -8,8 +8,9 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
+import PropTypes from 'prop-types';
 import { theme } from "../constants";
-import { Typography } from "./";
+import Typography from "./Typography";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("screen");
 const BUTTON_WIDTH = 100;
@@ -80,5 +81,10 @@ const styles = StyleSheet.create({
     padding: 8,
   },
 });
+
+Input.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func
+}
 
 export default Input;

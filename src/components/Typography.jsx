@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextPropT } from 'react-native';
+import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { theme } from '../constants'

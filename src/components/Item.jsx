@@ -6,8 +6,10 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
+import PropTypes from 'prop-types';
 import { theme } from "../constants";
-import { Dot, Typography } from "./";
+import Typography from "./Typography";
+import Dot from "./Dot";
 
 const { width } = Dimensions.get("screen");
 
@@ -49,5 +51,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+Item.propTypes = {
+    text: PropTypes.string.isRequired,
+    removeItem: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired
+}
 
 export default Item;

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, Dimensions} from "react-native";
 import { theme } from "../constants";
-import { Typography } from "./";
+import Typography from "./Typography";
 
 const { width, height } = Dimensions.get('screen')
 
