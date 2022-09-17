@@ -3,7 +3,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { Auth, Home } from './src';
 import { theme } from './src/constants';
-import { Provider } from './src/context';
 
 export default function App() {
   const [access, setAccess] = useState(false)
@@ -14,9 +13,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Provider>
-        {screenRender()}
-      </Provider>
+      {screenRender()}
       <StatusBar style="auto" />
     </View>
   );
