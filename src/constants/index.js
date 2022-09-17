@@ -28,7 +28,7 @@ const theme = {
         midBold: '700',
         bold: '900',
     },
-    spaceSize: 8
+    spaceSize: 8,
 }
 
 const strings = {
@@ -44,4 +44,8 @@ const strings = {
     }
 }
 
-export { theme, strings }
+const initialContext = {
+    todos: []
+}
+
+export { theme, strings, initialContext }
