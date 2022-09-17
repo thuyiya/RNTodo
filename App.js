@@ -10,15 +10,11 @@ import { theme } from "./src/constants";
 export default function App() {
   const [access, setAccess] = useState(false);
 
-  const screenRender = () => {
-    return access ? <Home /> : <Auth setAccess={(value) => setAccess(value)} />;
-  };
-
   return (
     <View style={styles.container}>
       <Provider store={store}>
         <PersistGate persistor={persistor} loading={null}>
-          {screenRender()}
+          {access ? <Home /> : <Auth setAccess={(value) => setAccess(value)} />}
         </PersistGate>
       </Provider>
       <StatusBar style="auto" />
