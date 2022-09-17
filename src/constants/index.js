@@ -20,7 +20,16 @@ const theme = {
         lightBold: '500',
         midBold: '700',
         bold: '900',
+    },
+    spaceSize: 8
+}
+
+const strings = {
+    AUTHENTICATION_SCREEN: {
+        DEVICE_CAPABILITY: 'No face or fingerprint scanner is available on the device.',
+        PROCCED_TEXT: 'Set Authentication to Proceed',
+        SETTINGS_BUTTON: 'Go to Settings'
     }
 }
 
-export { theme }
+export { theme, strings }

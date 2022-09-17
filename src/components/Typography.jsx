@@ -4,8 +4,16 @@ import PropTypes from 'prop-types';
 
 import { theme } from '../constants'
 
-const Typography = ({size = 'h5', weight= 'normal', children}) => {
+const Typography = ({
+    size = 'h5', 
+    weight= 'normal', 
+    space = 1,
+    align = 'center',
+    children
+}) => {
     return (<Text style={{
+        margin: space * theme.spaceSize,
+        textAlign: align,
         fontSize: theme.fontSizeMap[size],
         fontWeight: theme.fontWeightMap[weight]
     }}>{children}</Text>)

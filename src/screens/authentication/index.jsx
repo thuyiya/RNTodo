@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import * as LocalAuthentication from "expo-local-authentication";
 import { LoadingView, Typography } from "../../components";
-import { theme } from "../../constants";
+import { theme, strings } from "../../constants";
 
 const Authentication = ({ setAccess }) => {
   const [biometrics, setBiometrics] = useState(false);
@@ -59,12 +59,13 @@ const Authentication = ({ setAccess }) => {
     <View style={styles.container}>
       <LoadingView enable={loading} />
       <View style={styles.footer}>
-        <Typography size={'h5'} weight={'lightBold'}>Set Authentication to Proceed</Typography>
+        {!biometrics && <Typography space={1} align={'center'} >{strings.AUTHENTICATION_SCREEN.DEVICE_CAPABILITY}</Typography>}
+        <Typography size={'h5'} weight={'lightBold'}>{strings.AUTHENTICATION_SCREEN.PROCCED_TEXT}</Typography>
         <TouchableOpacity
           onPress={() => authentication()}
           style={styles.button}
         >
-          <Text style={styles.buttonText}>Go to Settings</Text>
+          <Text style={styles.buttonText}>{strings.AUTHENTICATION_SCREEN.SETTINGS_BUTTON}</Text>
         </TouchableOpacity>
       </View>
     </View>
