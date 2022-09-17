@@ -7,7 +7,7 @@ import { theme } from '../constants'
 const Typography = ({
     size = 'h5', 
     weight= 'normal', 
-    space = 1,
+    space = 0,
     align = 'center',
     style = {},
     color = theme.colors.textColor,

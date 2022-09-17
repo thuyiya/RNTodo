@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions, Text, ActivityIndicator } from 'react-native';
 import { theme } from '../constants';
+import { Typography } from './';
 
 const { height, width } = Dimensions.get('screen');
 
@@ -13,7 +14,7 @@ const Loading = ({ enable, text }) => {
     return (<View style={styles.container}> 
             <View style={styles.backdrop}/>
             <ActivityIndicator size={"small"} color={theme.colors.loadingIndicator}/>
-            <Text style={styles.text}>{text}</Text>
+            <Typography style={styles.text}>{text}</Typography>
     </View>)
 }
 

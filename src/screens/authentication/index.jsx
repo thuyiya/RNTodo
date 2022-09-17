@@ -7,6 +7,7 @@ import {
   Alert,
   Linking,
   Platform,
+  SafeAreaView
 } from "react-native";
 import * as LocalAuthentication from "expo-local-authentication";
 import { LoadingView, Typography } from "../../components";
@@ -85,7 +86,7 @@ const Authentication = ({ setAccess }) => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <LoadingView enable={loading} />
       <View style={styles.footer}>
         {!biometrics && (
@@ -105,7 +106,7 @@ const Authentication = ({ setAccess }) => {
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

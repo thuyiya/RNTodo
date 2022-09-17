@@ -1,11 +1,14 @@
 const theme = {
     colors: {
         primary: '#0145a6',
-        textColor: '#000000',
+        textColor: '#333333',
+        seconderyTextColor: '#787878',
         backdropColor: '#000000',
         loadingIndicator: '#000000',
         background: '#f0f0f0',
-        disbaleText: '#c9c9c9'
+        disbaleText: '#c9c9c9',
+        white: '#ffffff',
+        buttonText: '#ffffff',
     },
     opacity: {
         backdrop: 0.3
@@ -20,6 +23,7 @@ const theme = {
     },
     fontWeightMap: {
         normal: '300',
+        avarage: '400',
         lightBold: '500',
         midBold: '700',
         bold: '900',
