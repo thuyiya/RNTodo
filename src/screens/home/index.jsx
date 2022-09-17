@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import {
   View,
   Platform,
@@ -7,51 +7,44 @@ import {
   StyleSheet,
   SafeAreaView
 } from "react-native";
+import { useSelector, useDispatch } from 'react-redux';
 import { Typography, EmptryView, List, Input, Item } from "../../components";
 import { theme, strings } from "../../constants";
+import { addItems, removeItem, setSelectedIndex } from "./actions";
 
 const Home = () => {
-  const [items, setItems] = useState([]);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const  todoList  = useSelector(state => state.items);
+  const  selectedIndex  = useSelector(state => state.selectedIndex);
+  const dispatch = useDispatch();
+
 
   const addTodo = (text) => {
     const newItem = {
       id: new Date().valueOf(),
       text: text,
     };
-
-    if (selectedIndex > -1) {
-      const oldArray = [...items];
-      oldArray[selectedIndex] = {
-        ...oldArray[selectedIndex],
-        text: text,
-      };
-      setItems(oldArray);
-    } else {
-      setItems((prevState) => [...prevState, newItem]);
-    }
-
-    setSelectedIndex(-1);
+    dispatch(addItems(newItem));
   };
 
-  const removeItem = (id) => {
-    setItems((prevState) => prevState.filter((item) => item.id !== id));
-    setSelectedIndex(-1);
+  const removeTodoItem = (id) => {
+    dispatch(removeItem(id));
   };
 
   const onSelectItem = (index) => {
-    setSelectedIndex(index);
+    dispatch(setSelectedIndex(index))
   };
 
   const getItemText = (dataArray) => {
     if (dataArray.length > 0 && selectedIndex > -1) {
-      return items[selectedIndex].text;
+      return todoList[selectedIndex].text;
     }
 
     return "";
   };
 
-  const updateText = useMemo(() => getItemText(items), [selectedIndex]);
+  console.log("todoList ", todoList)
+
+  const updateText = useMemo(() => getItemText(todoList), [selectedIndex]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -65,17 +58,17 @@ const Home = () => {
         {strings.HOME.TITLE}
       </Typography>
       <List>
-        {items.map((item, itemIndex) => {
+        {todoList.map((item, itemIndex) => {
           return (
             <Item
               key={item.id}
               {...item}
-              removeItem={() => removeItem(item.id)}
+              removeItem={() => removeTodoItem(item.id)}
               onSelect={() => onSelectItem(itemIndex)}
             />
           );
         })}
-        {items.length < 1 && <EmptryView />}
+        {todoList.length < 1 && <EmptryView />}
       </List>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}

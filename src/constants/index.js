@@ -44,8 +44,17 @@ const strings = {
     }
 }
 
+const actionTypes = {
+    TODO: {
+        ADD_ITEM: 'TODO_ADD_ITEM',
+        CLEAN_ITEMS: 'CLEAN_ITEMS',
+        REMOVE_ITEMS: 'REMOVE_ITEMS',
+        SET_SELECTED_ITEM: 'SET_SELECTED_ITEM'
+    }
+}
+
 const initialContext = {
     todos: []
 }
 
-export { theme, strings, initialContext }
+export { theme, strings, initialContext, actionTypes }
