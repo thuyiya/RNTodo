@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dot /> renders correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#0145a6",
+      "borderRadius": 10,
+      "height": 20,
+      "width": 20,
+    }
+  }
+/>
+`;

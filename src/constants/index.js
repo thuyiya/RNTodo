@@ -41,6 +41,9 @@ const strings = {
     },
     HOME: {
         TITLE: 'TODO: '
+    },
+    EMPTYVIEW: {
+        NO_DATA: "No Todo's Found"
     }
 }
 

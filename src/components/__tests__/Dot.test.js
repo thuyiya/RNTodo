@@ -8,13 +8,15 @@ describe("<Dot />", () => {
     expect(tree.children).toBe(null);
   });
 
-//   it("Main container shoud coverd with SafeAreaView", () => {
-//     const tree = renderer.create(<Auth />).toJSON();
-//     expect(tree.type).toBe('RCTSafeAreaView');
-//   });
+  it("has 20px circle area", () => {
+    const tree = renderer.create(<Dot />).toJSON();
+    expect(tree.props.style.height).toBe(20);
+    expect(tree.props.style.width).toBe(20);
+    expect(tree.props.style.borderRadius).toBe(10);
+  });
 
-//   it('renders correctly', () => {
-//     const tree = renderer.create(<Home />).toJSON();
-//     expect(tree).toMatchSnapshot();
-//   });
+  it('renders correctly', () => {
+    const tree = renderer.create(<Dot />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

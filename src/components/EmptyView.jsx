@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text, Dimensions} from "react-native";
-import { theme } from "../constants";
+import { theme, strings } from "../constants";
 import Typography from "./Typography";
 
 const { width, height } = Dimensions.get('screen')
@@ -8,7 +8,7 @@ const { width, height } = Dimensions.get('screen')
 const EmptryView = () => {
   return (
     <View style={styles.container}>
-      <Typography color={theme.colors.disbaleText} >No Todo's Found</Typography>
+      <Typography testID={'text'} color={theme.colors.disbaleText} >{strings.EMPTYVIEW.NO_DATA}</Typography>
     </View>
   );
 };
