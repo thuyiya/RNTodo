@@ -101,4 +101,8 @@ picnic-react-native-thuyiya
 - Node (v14.17.3)
 - Npm (6.14.13)
 
+#### Project envirement screenshot
+
+<img src="./screenshots/projectenv.png">
+
 ##### Documented By _Thusitha Jayalath_
