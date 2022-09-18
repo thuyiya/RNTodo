@@ -1,6 +1,6 @@
 # RNTodo
 
-#### Instructions and requirements
+### Instructions and requirements
 
 1. Implement a secured TODO list application with a bare React Native project and Expo local-authentication module.
 2. The application MUST ask for authentication before the user can add, update and delete items on the list.
@@ -11,7 +11,15 @@
 This application setup and build with latest version with react native (EXPO) [Follow this link to find more infromation](https://reactnative.dev/docs/environment-setup) 
 
 
-#### Third party libraries
+- This project is develop and delivered with EXPO GO
+- Follow the link to get documentation [Link](https://docs.expo.dev/)
+- Project is tested with 
+    - `Pixel_2_API_Tiramisu` Android Emulator
+    - `iPhone 12` iOS simulator
+    - Device support checked with `iPhone 12 Mini`, `iPhone 12` and `Samsung M2`
+
+
+### Third party libraries
 
 | library                                                               | Summary                                                                                                                                                                     |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,7 +31,7 @@ This application setup and build with latest version with react native (EXPO) [F
 | [react-redux](https://react-redux.js.org)                          | React Redux is the official React UI bindings layer for Redux                                   |
 | [redux-persist](https://www.npmjs.com/package/redux-persist)                          | Persist and rehydrate a redux store.                                   |
 
-#### Understanding the File Structure
+### Understanding the File Structure
 
 ```
 picnic-react-native-thuyiya
@@ -39,14 +47,48 @@ picnic-react-native-thuyiya
 │   index.js
 ```
 
-#### Functionality
+### Screenshot of running project IOS and Android
 
-#### Test coverage
+#### IOS Screenshots
 
-#### Project setup instructions
+<img src="./screenshots/ios/1.png" width="200">
+<img src="./screenshots/ios/2.png" width="200">
+<img src="./screenshots/ios/3.png" width="200">
+<img src="./screenshots/ios/4.png" width="200">
 
+#### Android Screenshots
 
-#### Developer Tools And Env
+<img src="./screenshots/android/1.png" width="200">
+<img src="./screenshots/android/2.png" width="200">
+<img src="./screenshots/android/3.png" width="200">
+<img src="./screenshots/android/4.png" width="200">
+
+### Functionality
+1. Local authentication to protect the todos
+2. Keep access store untill restart the application
+3. Navigate to seetings page if user did not setup any local authentication
+
+### Test coverage
+
+### Project setup instructions
+
+- Instruction to run the project in android and ios
+    1. First of all clone the project from 
+    2. Then install packages using `npm install` on root of the project
+    3. Starting Metro Bundler execute the  `npm start` on root of the project
+        - Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+        - Press a │ open Android
+        - Press i │ open iOS simulator
+        - Press w │ open web
+        - Press r │ reload app
+        - Press m │ toggle menu
+        - Press ? │ show all commands
+    4. Login to your expo to run it in your decvce easilay 
+
+- Instruction for check test
+    1. Execute `npm run tes` on root of the project, All the test files are under  `__tests__` folders
+ 
+### Developer Tools And Env
 
 - macOS Monterey (12.4)
 - VSCode 1.71.0 (Universal)

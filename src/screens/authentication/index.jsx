@@ -30,7 +30,49 @@ const Authentication = ({ setAccess }) => {
       setLoading(false);
     }
   };
-  
+
+  /**
+   * Go to settings alert
+   */
+  const goToSettingsAlert = () => {
+    Alert.alert(
+      strings.AUTHENTICATION_SCREEN.GO_TO_SETTINGS_ALERT_TITLE,
+      strings.AUTHENTICATION_SCREEN.GO_TO_SETTINGS_ALERT_DESCRIPTION,
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },
+        { 
+          text: "Go to Settings", 
+          onPress: () => openSettings()
+        },
+      ]
+    );
+  }
+
+  /**
+   * 
+   */
+   const applicationAccessAlert = () => {
+    Alert.alert(
+      strings.AUTHENTICATION_SCREEN.APP_ACCESS,
+      strings.AUTHENTICATION_SCREEN.APP_ACCESS_DESCRIPTION,
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },
+        { 
+          text: strings.AUTHENTICATION_SCREEN.PROCEED_TO_AUTH, 
+          onPress: () => authentication()
+        },
+      ]
+    );
+  }
+
   /**
    * Attempts to authenticate via Fingerprint/TouchID (or FaceID if available on the device).
    * Or Give option to setup authenticate from the settings
@@ -40,28 +82,23 @@ const Authentication = ({ setAccess }) => {
       setLoading(true);
       const { error, warning, success } = await LocalAuthentication.authenticateAsync();
       setLoading(false);
-      if (error != null) {
+
+      //if user cancel the auth process, give option to re enter to authenticate process
+      if(error === "user_cancel") {
+        applicationAccessAlert()
+        return
+      }
+
+       //If there is a error navigate user to settings page
+       if (error != null) {
         throw warning;
       }
 
+      //pass access
       setAccess(success);
     } catch (error) {
       setLoading(false);
-      Alert.alert(
-        strings.AUTHENTICATION_SCREEN.GO_TO_SETTINGS_ALERT_TITLE,
-        strings.AUTHENTICATION_SCREEN.GO_TO_SETTINGS_ALERT_DESCRIPTION,
-        [
-          {
-            text: "Cancel",
-            onPress: () => console.log("Cancel Pressed"),
-            style: "cancel",
-          },
-          { 
-            text: "Go to Settings", 
-            onPress: () => openSettings()
-          },
-        ]
-      );
+      goToSettingsAlert()
     }
   };
 
@@ -102,7 +139,7 @@ const Authentication = ({ setAccess }) => {
           style={styles.button}
         >
           <Text style={styles.buttonText}>
-            {strings.AUTHENTICATION_SCREEN.SETTINGS_BUTTON}
+            {strings.AUTHENTICATION_SCREEN.GO_TO_SETTINGS}
           </Text>
         </TouchableOpacity>
       </View>

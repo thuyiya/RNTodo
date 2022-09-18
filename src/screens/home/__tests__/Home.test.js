@@ -1,7 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import * as reactRedux from "react-redux";
+import { render, screen } from "@testing-library/react-native";
 import Home from "../";
+import { strings } from "../../../constants";
 
 jest.mock("react-redux", () => ({
   useSelector: jest.fn(),
@@ -28,6 +30,11 @@ describe("<Home />", () => {
   it("has 3 children", () => {
     const tree = renderer.create(<Home />).toJSON();
     expect(tree.children.length).toBe(3);
+  });
+
+  it(`displays Home title ${strings.HOME.TITLE}`, () => {
+    render(<Home />);
+    expect(screen.queryByText(strings.HOME.TITLE)).toBeTruthy();
   });
 
   it("renders correctly", () => {

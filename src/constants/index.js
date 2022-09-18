@@ -35,9 +35,12 @@ const strings = {
     AUTHENTICATION_SCREEN: {
         DEVICE_CAPABILITY: 'No face or fingerprint scanner is available on the device.',
         PROCCED_TEXT: 'Set Authentication to Proceed',
-        SETTINGS_BUTTON: 'Go to Settings',
+        GO_TO_SETTINGS: 'Go to Settings',
+        PROCEED_TO_AUTH: 'Proceed',
         GO_TO_SETTINGS_ALERT_TITLE: 'Authentication Setup',
-        GO_TO_SETTINGS_ALERT_DESCRIPTION: 'Go to settings and setup authentication to proceed'
+        GO_TO_SETTINGS_ALERT_DESCRIPTION: 'Go to settings and setup authentication to proceed',
+        APP_ACCESS: 'Access setup',
+        APP_ACCESS_DESCRIPTION: 'You have to pass your authentication process to see todos',
     },
     HOME: {
         TITLE: 'TODO: '
