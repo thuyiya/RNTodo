@@ -123,6 +123,7 @@ exports[`<Home /> renders correctly 1`] = `
             "padding": 8,
           }
         }
+        testID="button3"
       >
         <Text
           style={

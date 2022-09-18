@@ -49,7 +49,7 @@ const Input = ({ onChange, value }) => {
         clearButtonMode={"while-editing"}
         onChangeText={(text) => setText(text)}
       />
-      <TouchableOpacity style={styles.button} onPress={() => add()}>
+      <TouchableOpacity testID="button3" style={styles.button} onPress={() => add()}>
         <Typography size="h6" weight="lightBold" color={theme.colors.buttonText} >{value === "" ? "ADD" : "UPDATE"}</Typography>
       </TouchableOpacity>
     </View>
