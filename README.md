@@ -64,11 +64,23 @@ picnic-react-native-thuyiya
 <img src="./screenshots/android/4.png" width="200">
 
 ### Functionality
+
+- Auth Process
 1. Local authentication to protect the todos
 2. Keep access store untill restart the application
 3. Navigate to seetings page if user did not setup any local authentication
+4. Catch user cancel auth process and give option to procced
+
+- Todo 
+1. Add Todos
+2. Remove Todos
+3. Update todos
+4. Keep todos when come back to the application again
 
 ### Test coverage
+1. Snapshot for every components
+2. Uniti test for check rendering
+3. Mock selectors and dispatch
 
 ### Project setup instructions
 
