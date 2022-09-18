@@ -39,6 +39,10 @@ picnic-react-native-thuyiya
 │   index.js
 ```
 
+#### Functionality
+
+#### Test coverage
+
 #### Project setup instructions
 
 

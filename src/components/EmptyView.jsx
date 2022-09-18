@@ -8,7 +8,7 @@ const { width, height } = Dimensions.get('screen')
 const EmptryView = () => {
   return (
     <View style={styles.container}>
-      <Typography testID={'text'} color={theme.colors.disbaleText} >{strings.EMPTYVIEW.NO_DATA}</Typography>
+      <Typography color={theme.colors.disbaleText} >{strings.EMPTYVIEW.NO_DATA}</Typography>
     </View>
   );
 };

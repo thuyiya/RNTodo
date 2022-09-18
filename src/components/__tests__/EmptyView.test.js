@@ -10,7 +10,7 @@ describe("<EmptyView />", () => {
     expect(tree.children.length).toBe(1);
   });
 
-  it('displays the passed-in name', () => {
+  it(`displays the ${strings.EMPTYVIEW.NO_DATA}`, () => {
     render(<EmptyView />);
     expect(screen.queryByText(strings.EMPTYVIEW.NO_DATA)).toBeTruthy();
   });

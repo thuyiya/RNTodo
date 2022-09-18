@@ -58,7 +58,6 @@ exports[`<Home /> renders correctly 1`] = `
               {},
             ]
           }
-          testID="text"
         >
           No Todo's Found
         </Text>
