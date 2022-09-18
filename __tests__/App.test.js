@@ -5,7 +5,6 @@ import App from "../App";
 describe("<App />", () => {
   it("Contain With View", () => {
     const tree = renderer.create(<App />).toJSON();
-    console.log(tree)
     expect(tree.type).toBe('View');
   });
 

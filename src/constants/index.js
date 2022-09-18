@@ -53,8 +53,4 @@ const actionTypes = {
     }
 }
 
-const initialContext = {
-    todos: []
-}
-
-export { theme, strings, initialContext, actionTypes }
+export { theme, strings, actionTypes }

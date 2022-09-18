@@ -34,15 +34,13 @@ const Home = () => {
     dispatch(setSelectedIndex(index))
   };
 
-  const getItemText = (dataArray) => {
-    if (dataArray.length > 0 && selectedIndex > -1) {
-      return todoList[selectedIndex].text;
+  const getItemText = (data = []) => {
+    if (data.length > 0 && selectedIndex > -1) {
+      return data[selectedIndex].text;
     }
 
     return "";
   };
-
-  console.log("todoList ", todoList)
 
   const updateText = useMemo(() => getItemText(todoList), [selectedIndex]);
 

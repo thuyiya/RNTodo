@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Auth /> renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "marginTop": "auto",
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#333333",
+            "fontSize": 16,
+            "fontWeight": "300",
+            "margin": 8,
+            "textAlign": "center",
+          },
+          {},
+        ]
+      }
+    >
+      No face or fingerprint scanner is available on the device.
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#333333",
+            "fontSize": 16,
+            "fontWeight": "500",
+            "margin": 0,
+            "textAlign": "center",
+          },
+          {},
+        ]
+      }
+    >
+      Set Authentication to Proceed
+    </Text>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignContent": "center",
+          "backgroundColor": "#0145a6",
+          "borderRadius": 20,
+          "height": 40,
+          "justifyContent": "center",
+          "margin": 8,
+          "marginBottom": 60,
+          "opacity": 1,
+          "padding": 8,
+          "width": 160,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontWeight": "500",
+            "textAlign": "center",
+          }
+        }
+      >
+        Go to Settings
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

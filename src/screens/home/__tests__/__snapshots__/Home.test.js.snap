@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    {
+      "flex": 1,
+      "paddingTop": 0,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#0145a6",
+          "fontSize": 22,
+          "fontWeight": "700",
+          "margin": 8,
+          "textAlign": "left",
+        },
+        {},
+      ]
+    }
+  >
+    TODO: 
+  </Text>
+  <RCTScrollView
+    showsVerticalScrollIndicator={false}
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "height": 800.4,
+            "justifyContent": "center",
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#c9c9c9",
+                "fontSize": 16,
+                "fontWeight": "300",
+                "margin": 0,
+                "textAlign": "center",
+              },
+              {},
+            ]
+          }
+        >
+          No Todo's Found
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    onLayout={[Function]}
+    style={
+      {
+        "paddingBottom": 0,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderRadius": 8,
+          "flexDirection": "row",
+          "height": 60,
+          "justifyContent": "center",
+          "margin": 8,
+          "width": 734,
+        }
+      }
+    >
+      <TextInput
+        clearButtonMode="while-editing"
+        onChangeText={[Function]}
+        placeholder="Enter Here..."
+        style={
+          {
+            "height": 40,
+            "padding": 10,
+            "width": 650,
+          }
+        }
+        value=""
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#0145a6",
+            "borderRadius": 18,
+            "height": 40,
+            "justifyContent": "center",
+            "minWidth": 60,
+            "opacity": 1,
+            "padding": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#ffffff",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "margin": 0,
+                "textAlign": "center",
+              },
+              {},
+            ]
+          }
+        >
+          ADD
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
