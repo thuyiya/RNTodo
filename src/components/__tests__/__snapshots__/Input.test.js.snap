@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> renders correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "borderRadius": 8,
+      "flexDirection": "row",
+      "height": 60,
+      "justifyContent": "center",
+      "margin": 8,
+      "width": 734,
+    }
+  }
+>
+  <TextInput
+    clearButtonMode="while-editing"
+    onChangeText={[Function]}
+    placeholder="Enter Here..."
+    style={
+      {
+        "height": 40,
+        "padding": 10,
+        "width": 650,
+      }
+    }
+    testID="input1"
+    value=""
+  />
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#0145a6",
+        "borderRadius": 18,
+        "height": 40,
+        "justifyContent": "center",
+        "minWidth": 60,
+        "opacity": 1,
+        "padding": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#ffffff",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "margin": 0,
+            "textAlign": "center",
+          },
+          {},
+        ]
+      }
+    >
+      UPDATE
+    </Text>
+  </View>
+</View>
+`;

@@ -97,6 +97,7 @@ exports[`<Home /> renders correctly 1`] = `
             "width": 650,
           }
         }
+        testID="input1"
         value=""
       />
       <View

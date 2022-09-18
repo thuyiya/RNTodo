@@ -42,6 +42,7 @@ const Input = ({ onChange, value }) => {
     <View style={styles.container}>
       <TextInput
         ref={inputRef}
+        testID="input1"
         placeholder={"Enter Here..."}
         style={styles.input}
         value={text}

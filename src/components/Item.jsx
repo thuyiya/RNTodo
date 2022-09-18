@@ -6,22 +6,45 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { theme } from "../constants";
 import Typography from "./Typography";
 import Dot from "./Dot";
 
 const { width } = Dimensions.get("screen");
 
-const Item = ({ text, removeItem, onSelect }) => {
+const Item = ({
+  text,
+  removeItem,
+  onSelect,
+}) => {
   return (
-    <TouchableOpacity onPress={onSelect} style={styles.container}>
+    <TouchableOpacity
+      testID={"button1"}
+      onPress={onSelect}
+      style={styles.container}
+    >
       <Dot />
-      <Typography color={theme.colors.seconderyTextColor} align="left" weight="avarage" style={styles.text}>
+      <Typography
+        color={theme.colors.seconderyTextColor}
+        align="left"
+        weight="avarage"
+        style={styles.text}
+      >
         {text}
       </Typography>
-      <TouchableOpacity onPress={removeItem} style={styles.button}>
-        <Typography color={theme.colors.seconderyTextColor} size="h6" weight="avarage">REMOVE</Typography>
+      <TouchableOpacity
+        testID={"button2"}
+        onPress={removeItem}
+        style={styles.button}
+      >
+        <Typography
+          color={theme.colors.seconderyTextColor}
+          size="h6"
+          weight="avarage"
+        >
+          REMOVE
+        </Typography>
       </TouchableOpacity>
     </TouchableOpacity>
   );
@@ -40,7 +63,7 @@ const styles = StyleSheet.create({
   button: {
     width: 80,
     padding: 8,
-    zIndex: 99999
+    zIndex: 99999,
   },
   text: {
     marginLeft: 8,
@@ -53,9 +76,9 @@ const styles = StyleSheet.create({
 });
 
 Item.propTypes = {
-    text: PropTypes.string.isRequired,
-    removeItem: PropTypes.func.isRequired,
-    onSelect: PropTypes.func.isRequired
-}
+  text: PropTypes.string.isRequired,
+  removeItem: PropTypes.func,
+  onSelect: PropTypes.func,
+};
 
 export default Item;
