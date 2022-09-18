@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> renders correctly 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View />
+</RCTScrollView>
+`;
