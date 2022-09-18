@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingView /> renders correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#333333",
+        "fontSize": 16,
+        "fontWeight": "300",
+        "margin": 0,
+        "textAlign": "center",
+      },
+      {},
+    ]
+  }
+>
+  Hello
+</Text>
+`;

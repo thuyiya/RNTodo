@@ -2,7 +2,6 @@ import React from "react";
 import renderer from "react-test-renderer";
 import {render, screen} from '@testing-library/react-native';
 import LoadingView from "../LoadingView";
-import { strings } from "../../constants";
 
 describe("<LoadingView />", () => {
   it("has 2 children", () => {
