@@ -51,17 +51,11 @@ picnic-react-native-thuyiya
 
 #### IOS Screenshots
 
-<img src="./screenshots/ios/1.png" width="100">
-<img src="./screenshots/ios/2.png" width="100">
-<img src="./screenshots/ios/3.png" width="100">
-<img src="./screenshots/ios/4.png" width="100">
+<img src="./screenshots/ios.png">
 
 #### Android Screenshots
 
-<img src="./screenshots/android/1.png" width="100">
-<img src="./screenshots/android/2.png" width="100">
-<img src="./screenshots/android/3.png" width="100">
-<img src="./screenshots/android/4.png" width="100">
+<img src="./screenshots/android.png">
 
 ### Functionality
 
